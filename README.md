@@ -106,7 +106,7 @@ soapClient.SendSimpleSMS(username, password, new string[] { to }, from, text, is
 
 ```js
 // وب سرویس پیامک
-SendRestClient restClient = new SendRestClient();
+RestClient restClient = new RestClient();
 SendSoapClient soapClient = new SendSoapClient();
 // وب سرویس تیکت پشتیبانی
 TicketsSoapClient ticketSoapClient = new TicketsSoapClient();
@@ -152,7 +152,7 @@ ReceiveSoapClient receiveSoapClient = new ReceiveSoapClient();
 #### ارسال
 
 ```js
-restClient.send(to, from, text, isFlash);
+restClient.Send(to, from, text, isFlash);
 soapClient.SendSimpleSMS(username, password, new string[] { to }, from, text, isFlash);
 ```
 <div dir='rtl'>
@@ -169,7 +169,7 @@ soapClient.GetDeliveries(recIds[], username, password);
 #### لیست پیامک ها
 
 ```js
-restClient.getMessages(location, index, count, from);
+restClient.GetMessages(location, index, count, from);
 soapClient.getMessages(username, password, location, from, index, count);
 // جهت دریافت به صورت رشته ای
 receiveSoapClient.GetMessagesByDate(username, password, location, from, index, count, dateFrom, dateTo);
@@ -180,13 +180,13 @@ receiveSoapClient.GetUsersMessagesByDate(username, password, location, from, ind
 
 #### موجودی
 ```js
-restClient.getCredit();
+restClient.GetCredit();
 soapClient.GetCredit(username, password);
 ```
 
 #### تعرفه پایه / دریافت قیمت قبل از ارسال
 ```js
-restClient.getBasePrice();
+restClient.GetBasePrice();
 soapClient.GetSmsPrice(username, password, irancellCount, mtnCount, from, text);
 ```
 #### لیست شماره اختصاصی
