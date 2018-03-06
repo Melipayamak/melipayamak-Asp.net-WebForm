@@ -106,7 +106,7 @@ soapClient.SendSimpleSMS(username, password, new string[] { to }, from, text, is
 
 ```js
 // وب سرویس پیامک
-RestClient restClient = new RestClient();
+RestClient restClient = new RestClient(username, password);
 SendSoapClient soapClient = new SendSoapClient();
 // وب سرویس تیکت پشتیبانی
 TicketsSoapClient ticketSoapClient = new TicketsSoapClient();
