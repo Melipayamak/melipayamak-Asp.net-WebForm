@@ -7,7 +7,9 @@
         <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
         <p>
 			<asp:Button CssClass="btn btn-primary btn-lg" runat="server" OnClick="onSoapClick" Text="Send Soap SMS"/>
+			<asp:Button CssClass="btn btn-primary btn-lg" runat="server" OnClick="onSoapAsyncClick" Text="Send Async Soap SMS"/>
 			<asp:Button CssClass="btn btn-primary btn-lg" runat="server" OnClick="onRestClick" Text="Send Rest SMS"/>
+			<asp:Button CssClass="btn btn-primary btn-lg" runat="server" OnClick="onRestAsyncClick" Text="Send Async Rest SMS"/>
         </p>
     </div>
 
